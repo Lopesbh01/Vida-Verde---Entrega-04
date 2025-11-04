@@ -1,0 +1,86 @@
+/* high-contrast.css - Tema de alto contraste */
+[data-theme="high-contrast"] {
+  /* Cores de alto contraste WCAG AAA */
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --accent-color: #ffff00;
+  --error-color: #ff0000;
+  --success-color: #00ff00;
+
+  /* Texto e fundo */
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffff00;
+  --border-color: #000000;
+}
+
+.theme-high-contrast {
+  /* Melhorar visibilidade de todos os elementos */
+  color: var(--text-primary) !important;
+  background-color: var(--bg-primary) !important;
+}
+
+.theme-high-contrast * {
+  border-color: var(--border-color) !important;
+}
+
+.theme-high-contrast .btn {
+  border: 3px solid var(--border-color) !important;
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  font-weight: bold !important;
+}
+
+.theme-high-contrast .btn:hover,
+.theme-high-contrast .btn:focus {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  outline: 3px solid var(--accent-color) !important;
+}
+
+.theme-high-contrast a {
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+.theme-high-contrast a:hover,
+.theme-high-contrast a:focus {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+.theme-high-contrast .card {
+  border: 3px solid var(--border-color) !important;
+  background-color: var(--bg-primary) !important;
+}
+
+.theme-high-contrast input,
+.theme-high-contrast textarea,
+.theme-high-contrast select {
+  border: 3px solid var(--border-color) !important;
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.theme-high-contrast input:focus,
+.theme-high-contrast textarea:focus,
+.theme-high-contrast select:focus {
+  outline: 3px solid var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+}
+
+/* Indicadores visuais extras */
+.theme-high-contrast [aria-current="page"]::before {
+  content: "▶ ";
+  color: var(--accent-color);
+}
+
+.theme-high-contrast .sr-only:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: var(--space-2) !important;
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}

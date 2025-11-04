@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vida Verde - Preservação Ambiental em Minas Gerais</title>
+    <meta
+      name="description"
+      content="ONG dedicada à preservação ambiental e sustentabilidade em Minas Gerais. Projetos de reflorestamento, educação ambiental e conservação."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Vida Verde - Preservação Ambiental" />
+    <meta
+      property="og:description"
+      content="Juntos na missão de proteger nosso patrimônio natural em Minas Gerais"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vidaverde.org" />
+
+    <!-- Preload crítico -->
+    <link rel="preload" href="assets/css/styles.min.css" as="style" />
+    <link rel="preload" href="assets/js/app.min.js" as="script" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.min.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/imagens/favicon.ico" type="image/x-icon" />
+
+    <!-- Acessibilidade -->
+    <script>
+      // Detectar preferências do usuário
+      (function () {
+        const savedTheme = localStorage.getItem("preferred-theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const prefersContrast = window.matchMedia(
+          "(prefers-contrast: high)"
+        ).matches;
+
+        if (prefersContrast) {
+          document.documentElement.setAttribute("data-theme", "high-contrast");
+        } else if (savedTheme) {
+          document.documentElement.setAttribute("data-theme", savedTheme);
+        } else if (prefersDark) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+  </head>
+  <body class="theme-light">
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link"
+      >Pular para o conteúdo principal</a
+    >
+
+    <!-- Header -->
+    <header class="header" role="banner">
+      <div class="container">
+        <div class="header-content">
+          <a
+            href="/"
+            class="logo"
+            data-spa
+            aria-label="Vida Verde - Página inicial"
+          >
+            <i class="fas fa-seedling logo-icon" aria-hidden="true"></i>
+            <span class="logo-text">Vida Verde</span>
+          </a>
+
+          <button
+            class="mobile-menu-btn"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+          >
+            <i class="fas fa-bars" aria-hidden="true"></i>
+          </button>
+
+          <nav
+            id="main-navigation"
+            class="nav"
+            role="navigation"
+            aria-label="Navegação principal"
+          >
+            <ul class="nav-list">
+              <li>
+                <a href="/" class="nav-link active" data-spa data-accesskey="1"
+                  >Início</a
+                >
+              </li>
+              <li class="dropdown">
+                <a
+                  href="/projetos"
+                  class="nav-link dropdown-toggle"
+                  data-spa
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  Projetos
+                  <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li role="none">
+                    <a
+                      href="/projetos#nascentes"
+                      class="dropdown-link"
+                      role="menuitem"
+                      data-spa
+                      >Nascentes Vivas</a
+                    >
+                  </li>
+                  <li role="none">
+                    <a
+                      href="/projetos#cerrado"
+                      class="dropdown-link"
+                      role="menuitem"
+                      data-spa
+                      >Cerrado em Pé</a
+                    >
+                  </li>
+                  <li role="none">
+                    <a
+                      href="/projetos#mata-atlantica"
+                      class="dropdown-link"
+                      role="menuitem"
+                      data-spa
+                      >Mata Atlântica</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="/cadastro" class="nav-link" data-spa data-accesskey="2"
+                  >Cadastro</a
+                >
+              </li>
+              <li>
+                <a href="/contato" class="nav-link" data-spa data-accesskey="3"
+                  >Contato</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/projetos#doar"
+                  class="btn btn-secondary btn-sm"
+                  data-spa
+                  >Doar</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="nav-overlay" aria-hidden="true"></div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main id="main-content" class="main-grid" role="main">
+      <!-- Conteúdo carregado via SPA -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3>Vida Verde</h3>
+            <p>Preservando o patrimônio natural de Minas Gerais desde 2005.</p>
+          </div>
+          <div class="footer-column">
+            <h3>Links Rápidos</h3>
+            <ul class="footer-links">
+              <li><a href="/" data-spa>Página Inicial</a></li>
+              <li><a href="/projetos" data-spa>Projetos Sociais</a></li>
+              <li><a href="/cadastro" data-spa>Cadastro</a></li>
+              <li><a href="/contato" data-spa>Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Projetos</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/projetos#nascentes" data-spa>Nascentes Vivas</a>
+              </li>
+              <li><a href="/projetos#cerrado" data-spa>Cerrado em Pé</a></li>
+              <li>
+                <a href="/projetos#mata-atlantica" data-spa>Mata Atlântica</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Transparência</h3>
+            <ul class="footer-links">
+              <li><a href="#" data-spa>Relatórios Anuais</a></li>
+              <li><a href="#" data-spa>Prestação de Contas</a></li>
+              <li><a href="#" data-spa>Certificações</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 Vida Verde - Todos os direitos reservados</p>
+          <p>Desenvolvido por Fábio Lopes de Andrade</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/app.min.js" defer></script>
+  </body>
+</html>

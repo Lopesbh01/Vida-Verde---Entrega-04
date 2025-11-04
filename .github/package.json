@@ -1,0 +1,26 @@
+{
+  "name": "vida-verde-spa",
+  "version": "1.0.0",
+  "description": "Site acessível da ONG Vida Verde",
+  "scripts": {
+    "dev": "node scripts/dev-server.js",
+    "build": "node scripts/build.js",
+    "optimize-images": "node scripts/optimize-images.js",
+    "deploy": "node scripts/deploy.js",
+    "lint": "eslint src/js/**/*.js",
+    "test:a11y": "pa11y http://localhost:3000"
+  },
+  "devDependencies": {
+    "sharp": "^0.32.0",
+    "cssnano": "^6.0.0",
+    "terser": "^5.15.0",
+    "html-minifier": "^4.0.0",
+    "eslint": "^8.0.0"
+  },
+  "keywords": [
+    "acessibilidade",
+    "ong",
+    "meio-ambiente"
+  ],
+  "author": "Fábio Lopes de Andrade"
+}

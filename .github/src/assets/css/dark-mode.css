@@ -1,0 +1,121 @@
+/* dark-mode.css - Tema escuro acessível */
+[data-theme="dark"] {
+  /* Paleta escura com contraste adequado */
+  --primary-50: #1a1a1a;
+  --primary-100: #2d2d2d;
+  --primary-200: #404040;
+  --primary-300: #545454;
+  --primary-400: #686868;
+  --primary-500: #7c7c7c;
+  --primary-600: #909090;
+  --primary-700: #a4a4a4;
+  --primary-800: #b8b8b8;
+  --primary-900: #cccccc;
+
+  --secondary-500: #ffa726;
+  --secondary-600: #ff9800;
+
+  --neutral-50: #0a0a0a;
+  --neutral-100: #1a1a1a;
+  --neutral-200: #2a2a2a;
+  --neutral-300: #3a3a3a;
+  --neutral-400: #4a4a4a;
+  --neutral-500: #5a5a5a;
+  --neutral-600: #6a6a6a;
+  --neutral-700: #7a7a7a;
+  --neutral-800: #8a8a8a;
+  --neutral-900: #9a9a9a;
+
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --text-muted: #b0b0b0;
+
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2d2d2d;
+
+  --border-color: #404040;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+.theme-dark {
+  color-scheme: dark;
+}
+
+.theme-dark body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.theme-dark .header {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.theme-dark .card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.theme-dark .btn-primary {
+  background-color: var(--secondary-500);
+  color: var(--bg-primary);
+}
+
+.theme-dark .btn-outline {
+  border-color: var(--secondary-500);
+  color: var(--secondary-500);
+}
+
+.theme-dark .btn-outline:hover {
+  background-color: var(--secondary-500);
+  color: var(--bg-primary);
+}
+
+.theme-dark input,
+.theme-dark textarea,
+.theme-dark select {
+  background-color: var(--bg-tertiary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.theme-dark input:focus,
+.theme-dark textarea:focus,
+.theme-dark select:focus {
+  border-color: var(--secondary-500);
+  outline-color: var(--secondary-500);
+}
+
+.theme-dark .footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+/* Ajustes de contraste para garantir acessibilidade */
+.theme-dark a {
+  color: var(--secondary-500);
+}
+
+.theme-dark a:hover {
+  color: var(--secondary-600);
+}
+
+.theme-dark .text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Manter contraste adequado em todos os elementos */
+.theme-dark * {
+  box-shadow: none !important;
+}
+
+.theme-dark .shadow-sm {
+  box-shadow: 0 1px 2px 0 var(--shadow-color) !important;
+}
+
+.theme-dark .shadow {
+  box-shadow: 0 4px 6px -1px var(--shadow-color),
+    0 2px 4px -2px var(--shadow-color) !important;
+}
